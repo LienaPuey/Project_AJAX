@@ -31,7 +31,7 @@ function printHTML(datos) {
       cardBody.innerHTML +=
         `<div class="col-4">
         <img class="rounded-circle" src="${imagURL}" alt="Generic placeholder image" width="140" height="140">
-        <h2>${datos[claves[i]][j]["name"]}</h2>
+        <h4>${datos[claves[i]][j]["name"]}</h4>
         <p>${datos[claves[i]][j]["missions"][0] != undefined ? textRead : "No mission provided"}</p>
         <p><a class="btn btn-secondary" href="#" role="button">Read more &raquo;</a></p>
         </div>
@@ -42,7 +42,7 @@ function printHTML(datos) {
 
 function getData() {
 
-  var xhr = new XMLHttpRequest();
+  var xhr = new XMLHttpRequest()
   xhr.onreadystatechange = function() {
     if (this.readyState != 4) {
       return
