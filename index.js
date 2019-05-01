@@ -4,7 +4,7 @@
 
 function printHTML(datos) {
 
-  let cardBody = document.querySelectorAll('#mainRow')[0];
+  let cardBodyFirst = document.querySelectorAll('#mainRow')[0];
   let claves = Object.keys(datos);
   for (var i = 0; i < claves.length; i++) {
     for (var j = 0; j < datos[claves[i]].length; j++) {
@@ -28,7 +28,7 @@ function printHTML(datos) {
           imagURL = "img/VVKO.png"
           break;
       }
-      cardBody.innerHTML +=
+      cardBodyFirst.innerHTML +=
         `<div class="col-4">
         <img class="rounded-circle" src="${imagURL}" alt="Generic placeholder image" width="140" height="140">
         <h4>${datos[claves[i]][j]["name"]}</h4>
